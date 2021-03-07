@@ -10,6 +10,7 @@ public class Ball : MonoBehaviour
     private void Start()
     {
         rgdBody = GetComponent<Rigidbody2D>();
+        GetComponent<SpriteRenderer>().color = settings.Color;
         Reset();
     }
 
