@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class Ball : MonoBehaviour
 {
     [SerializeField] private float speed;
-    private Rigidbody2D rgdBody;
+    Rigidbody2D rgdBody;
+
+    public BallEvent Dropped;
 
     private void Start()
     {
@@ -21,8 +22,9 @@ public class Ball : MonoBehaviour
         rgdBody.AddForce(new Vector2(x, y) * speed);
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
+        Dropped.Invoke(this);
         transform.position = Vector2.zero;
         rgdBody.velocity = Vector2.zero;
         RandomPush();

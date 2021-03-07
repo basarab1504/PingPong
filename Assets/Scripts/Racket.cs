@@ -1,10 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class Racket : MonoBehaviour
 {
     [SerializeField] private float speed;
+    private int score;
+
+    public int Score
+    {
+        get => score;
+        set
+        {
+            score = value;
+            ScoreUpdated.Invoke(this);
+        }
+    }
+
+    public RacketEvent ScoreUpdated;
 
     private void Update()
     {
@@ -26,6 +38,6 @@ public class Racket : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        transform.position = new Vector2(-transform.position.x, transform.position.y);
+        transform.position = new Vector2(transform.position.x, transform.position.y);
     }
 }
