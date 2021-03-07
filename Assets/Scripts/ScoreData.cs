@@ -1,4 +1,7 @@
-struct ScoreData
+using System;
+
+[Serializable]
+public struct ScoreData
 {
-    public int Score { get; set; }
+    public int HighScore { get; set; }
 }

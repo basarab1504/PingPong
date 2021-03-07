@@ -9,9 +9,21 @@ public class HighScore : ScriptableObject
 
     public IntEvent HighestScoreUpdated;
 
+    public void Load(ScoreData data)
+    {
+        highestScore = data.HighScore;
+    }
+
+    public ScoreData Save()
+    {
+        return new ScoreData()
+        {
+            HighScore = highestScore
+        };
+    }
+
     public void ScoreUpdated(int score)
     {
-        Debug.Log("Og");
         if (score > highestScore)
         {
             highestScore = score;
