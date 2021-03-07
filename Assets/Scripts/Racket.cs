@@ -25,18 +25,18 @@ public class Racket : MonoBehaviour
             PushRight();
     }
 
-    public void PushRight()
+    private void PushRight()
     {
         transform.position += Vector3.right * speed * Time.deltaTime;
     }
 
-    public void PushLeft()
+    private void PushLeft()
     {
         transform.position += Vector3.left * speed * Time.deltaTime;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        transform.position = new Vector2(transform.position.x, transform.position.y);
+        transform.position = new Vector2(-transform.position.x, transform.position.y);
     }
 }
