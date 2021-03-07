@@ -2,4 +2,4 @@ using UnityEngine.Events;
 using System;
 
 [Serializable]
-public class FloatEvent : UnityEvent<float> {}
+public class IntEvent : UnityEvent<int> {}

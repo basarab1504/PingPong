@@ -10,7 +10,7 @@ public class Score : MonoBehaviour
         text = GetComponent<Text>();
     }
 
-    public void UpdateScore(float score)
+    public void UpdateScore(int score)
     {
         text.text = score.ToString();
     }

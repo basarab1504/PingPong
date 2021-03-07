@@ -4,7 +4,7 @@ public class Player : MonoBehaviour
 {
     private int score;
 
-    public FloatEvent ScoreUpdated;
+    public IntEvent ScoreUpdated;
 
     public int Score
     {
