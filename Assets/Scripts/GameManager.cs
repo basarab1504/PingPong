@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
     public void DefineScore(Ball ball)
     {
         if (ball.transform.position.y > 0)
-            up.Score++;
-        else
             down.Score++;
+        else
+            up.Score++;
     }
 }
