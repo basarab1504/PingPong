@@ -10,8 +10,8 @@ public class Score : MonoBehaviour
         text = GetComponent<Text>();
     }
 
-    public void UpdateScore(Racket racket)
+    public void UpdateScore(float score)
     {
-        text.text = racket.Score.ToString();
+        text.text = score.ToString();
     }
 }

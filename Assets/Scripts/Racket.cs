@@ -3,36 +3,18 @@
 public class Racket : MonoBehaviour
 {
     [SerializeField] private float speed;
-    private int score;
-
-    public int Score
-    {
-        get => score;
-        set
-        {
-            score = value;
-            ScoreUpdated.Invoke(this);
-        }
-    }
-
-    public RacketEvent ScoreUpdated;
 
     private void Update()
     {
         if (Input.GetKey(KeyCode.A))
-            PushLeft();
+            Push(Vector2.left);
         else if (Input.GetKey(KeyCode.D))
-            PushRight();
+            Push(Vector2.right);
     }
 
-    private void PushRight()
+    private void Push(Vector3 direction)
     {
-        transform.position += Vector3.right * speed * Time.deltaTime;
-    }
-
-    private void PushLeft()
-    {
-        transform.position += Vector3.left * speed * Time.deltaTime;
+        transform.position += direction * speed * Time.deltaTime;
     }
 
     private void OnTriggerExit2D(Collider2D other)

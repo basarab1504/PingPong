@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Racket up;
-    [SerializeField] private Racket down;
+    [SerializeField] private Player up;
+    [SerializeField] private Player down;
 
     public void DefineScore(Ball ball)
     {
