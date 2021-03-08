@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1511be2ac1494e946881e5874d14dc8b, type: 3}
   m_Name: HighScore
   m_EditorClassIdentifier: 
+  highScore: 25
   HighScoreUpdated:
     m_PersistentCalls:
       m_Calls: []

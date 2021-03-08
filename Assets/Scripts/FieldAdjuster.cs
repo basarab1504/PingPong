@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FieldManager : MonoBehaviour
+public class FieldAdjuster : MonoBehaviour
 {
     [SerializeField] BoxCollider2D playField;
     [SerializeField] BoxCollider2D wallLeft;
