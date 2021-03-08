@@ -11,14 +11,14 @@ public class HighScore : ScriptableObject
 
     public void Load(ScoreData data)
     {
-        highestScore = data.HighScore;
+        highestScore = data.highScore;
     }
 
     public ScoreData Save()
     {
         return new ScoreData()
         {
-            HighScore = highestScore
+            highScore = highestScore
         };
     }
 

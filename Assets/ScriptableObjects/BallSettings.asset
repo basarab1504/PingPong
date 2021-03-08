@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BallSettings
   m_EditorClassIdentifier: 
   minSpeed: 100
-  maxSpeed: 200
-  minRadius: 0.2
+  maxSpeed: 350
+  minRadius: 0.3
   maxRadius: 1

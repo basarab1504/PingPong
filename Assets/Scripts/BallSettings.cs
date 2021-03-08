@@ -11,10 +11,10 @@ public class BallSettings : ScriptableObject
 
     public void Load(BallData data)
     {
-        minSpeed = data.MinSpeed;
-        maxSpeed = data.MaxSpeed;
-        minRadius = data.MinRadius;
-        maxRadius = data.MaxRadius;
+        minSpeed = data.minSpeed;
+        maxSpeed = data.maxSpeed;
+        minRadius = data.minRadius;
+        maxRadius = data.maxRadius;
         R = data.R;
         G = data.G;
         B = data.B;
@@ -24,10 +24,10 @@ public class BallSettings : ScriptableObject
     {
         return new BallData()
         {
-            MinSpeed = minSpeed,
-            MaxSpeed = maxSpeed,
-            MinRadius = minRadius,
-            MaxRadius = maxRadius,
+            minSpeed = minSpeed,
+            maxSpeed = maxSpeed,
+            minRadius = minRadius,
+            maxRadius = maxRadius,
             R = R,
             G = G,
             B = B,            

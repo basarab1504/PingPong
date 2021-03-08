@@ -4,13 +4,13 @@ using UnityEngine;
 [Serializable]
 public struct BallData
 {
-    public float MaxSpeed { get; set; }
-    public float MinSpeed { get; set; }
-    public float MinRadius { get; set; }
-    public float MaxRadius { get; set; }
-    public float R { get; set; }
-    public float G { get; set; }
-    public float B { get; set; }
+    public float maxSpeed;
+    public float minSpeed;
+    public float minRadius;
+    public float maxRadius;
+    public float R;
+    public float G;
+    public float B;
 
     public Color Color => new Color(R, G, B, 100);
 }
