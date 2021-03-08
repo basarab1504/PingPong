@@ -1,5 +1,5 @@
-public interface ISerializeable
+public interface ISerializeable<T>
 {
-    void Load<T>(T data);
-    T Save<T>();
+    void Load(T data);
+    T Save();
 }

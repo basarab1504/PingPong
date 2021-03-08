@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "BallSettings", menuName = "ScriptableObjects/BallSettings")]
-public class BallSettings : ScriptableObject
+public class BallSettings : ScriptableObject, ISerializeable<BallData>
 {
     [SerializeField] private float minSpeed;
     [SerializeField] private float maxSpeed;
