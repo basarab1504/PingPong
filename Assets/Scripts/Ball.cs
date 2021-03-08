@@ -5,18 +5,18 @@ public class Ball : MonoBehaviour
     [SerializeField] private BallSettings settings;
     private Rigidbody2D rgdBody;
 
-    public BallEvent Dropped;
-
     private void Start()
     {
         rgdBody = GetComponent<Rigidbody2D>();
+
         GetComponent<SpriteRenderer>().color = settings.Color;
-        Reset();
+
+        SetRandomSize();
+        SetRandomDirection();
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Dropped.Invoke(this);
         Reset();
     }
 

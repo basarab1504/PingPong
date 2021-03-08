@@ -2,7 +2,7 @@ using System.IO;
 using System.Xml.Serialization;
 using UnityEngine;
 
-public class DataProvider
+public class XMLDataProvider : IFileDataProvider
 {
     public void Save<T>(string path, T data)
     {

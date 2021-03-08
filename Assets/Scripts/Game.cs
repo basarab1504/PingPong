@@ -5,7 +5,7 @@ public class Game : MonoBehaviour
     [SerializeField] private BallSettings ballSettings;
     [SerializeField] private HighScore scoreSettings;
 
-    DataProvider provider = new DataProvider();
+    IFileDataProvider provider = new XMLDataProvider();
 
     private void Awake()
     {

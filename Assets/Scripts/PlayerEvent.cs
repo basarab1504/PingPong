@@ -2,4 +2,4 @@ using System;
 using UnityEngine.Events;
 
 [Serializable]
-public class BallEvent : UnityEvent<Ball> {}
+public class PlayerEvent : UnityEvent<Player> {}
