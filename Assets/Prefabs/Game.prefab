@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6690463779567958362}
   - component: {fileID: 6690463779567958363}
-  - component: {fileID: 7896496302126683540}
   - component: {fileID: 5830853228731669974}
   - component: {fileID: 704374328265300705}
   m_Layer: 0
@@ -48,21 +47,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballSettings: {fileID: 11400000, guid: 5b746a3600935824d9becf7eff9b7ac8, type: 2}
   scoreSettings: {fileID: 11400000, guid: 289bd13a22cd5a2488881c0a6aede6a0, type: 2}
---- !u!114 &7896496302126683540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6690463779567958360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caa88cd84baba1e4b962f96757bdf6cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Moving:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &5830853228731669974
 MonoBehaviour:
   m_ObjectHideFlags: 0
