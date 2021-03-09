@@ -9,11 +9,13 @@ public class HighScoreObserver : MonoBehaviour
     private void Start()
     {
         text = GetComponent<Text>();
-        text.text = highScore.HighScoreValue.ToString();
+
+        HighestScoreUpdated(highScore.HighScoreValue);
+        
         highScore.HighScoreUpdated.AddListener(HighestScoreUpdated);
     }
 
-    public void HighestScoreUpdated(int score)
+    private void HighestScoreUpdated(int score)
     {
         text.text = score.ToString();
     }
