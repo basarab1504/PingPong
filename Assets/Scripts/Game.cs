@@ -7,7 +7,7 @@ public class Game : MonoBehaviour
 
     IFileDataProvider provider = new JsonDataProvider();
 
-    private void Start()
+    private void Awake()
     {
         DontDestroyOnLoad(gameObject);
 

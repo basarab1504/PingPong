@@ -11,10 +11,6 @@ public class BallSettings : ScriptableObject, ISerializeable<BallData>
 
     public void Load(BallData data)
     {
-        minSpeed = data.minSpeed;
-        maxSpeed = data.maxSpeed;
-        minRadius = data.minRadius;
-        maxRadius = data.maxRadius;
         R = data.R;
         G = data.G;
         B = data.B;
@@ -24,10 +20,6 @@ public class BallSettings : ScriptableObject, ISerializeable<BallData>
     {
         return new BallData()
         {
-            minSpeed = minSpeed,
-            maxSpeed = maxSpeed,
-            minRadius = minRadius,
-            maxRadius = maxRadius,
             R = R,
             G = G,
             B = B,            
@@ -40,8 +32,8 @@ public class BallSettings : ScriptableObject, ISerializeable<BallData>
 
     public Color Color => new Color(R, G, B, 100);
 
-    public float MinSpeed { get => minSpeed; set => minSpeed = value; }
-    public float MaxSpeed { get => maxSpeed; set => maxSpeed = value; }
-    public float MinRadius { get => minRadius; set => minRadius = value; }
-    public float MaxRadius { get => maxRadius; set => maxRadius = value; }
+    public float MinSpeed => minSpeed;
+    public float MaxSpeed => maxSpeed;
+    public float MinRadius => minRadius;
+    public float MaxRadius => maxRadius;
 }
