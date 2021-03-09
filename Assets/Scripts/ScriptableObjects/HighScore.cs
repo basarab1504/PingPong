@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "HighScore", menuName = "ScriptableObjects/HighScore")]
 public class HighScore : ScriptableObject, ISerializeable<ScoreData>
 {
-    [SerializeField] private int highScore;
+    private int highScore;
 
     public int HighScoreValue
     {
