@@ -37,11 +37,22 @@ public class Ball : MonoBehaviour
 
     private void SetRandomDirection()
     {
-        int x = Random.Range(0f, 1f) > 0.5f ? 1 : -1;
-        int y = Random.Range(0f, 1f) > 0.5f ? 1 : -1;
+        var x = GenerateRandom();
+        var y = GenerateRandom();
 
         float speed = Random.Range(settings.MinSpeed, settings.MaxSpeed);
 
         rgdBody.AddForce(new Vector2(x, y) * speed);
+    }
+
+    private float GenerateRandom()
+    {
+        float number;
+        do
+        {
+            number = Random.Range(-1f, 1f);
+        }
+        while (number == 0);
+        return number;
     }
 }
