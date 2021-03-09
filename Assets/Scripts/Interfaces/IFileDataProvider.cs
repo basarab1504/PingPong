@@ -1,5 +1,5 @@
 public interface IFileDataProvider
 {
-    T Load<T>(string path);
+    bool TryLoad<T>(string path, out T data);
     void Save<T>(string path, T data);
 }

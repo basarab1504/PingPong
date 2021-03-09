@@ -11,8 +11,10 @@ public class Game : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
 
-        ballSettings.Load(provider.Load<BallData>("ballsettings"));
-        scoreSettings.Load(provider.Load<ScoreData>("highScore"));
+        if (provider.TryLoad<BallData>("ballsettings", out BallData ballData))
+            ballSettings.Load(ballData);
+        if (provider.TryLoad<ScoreData>("highScore", out ScoreData scoreData))
+            scoreSettings.Load(scoreData);
     }
 
     private void OnDestroy()

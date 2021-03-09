@@ -11,14 +11,19 @@ public class JsonDataProvider : IFileDataProvider
         File.WriteAllText(fullPath, json);
     }
 
-    public T Load<T>(string path)
+    public bool TryLoad<T>(string path, out T data)
     {
         string fullPath = Application.persistentDataPath + "\\" + path;
 
         if (!File.Exists(fullPath))
-            return default(T);
+        {
+            data = default(T);
+            return false;
+        }
 
         var json = File.ReadAllText(fullPath);
-        return JsonUtility.FromJson<T>(json);
+        data = JsonUtility.FromJson<T>(json);
+        
+        return true;
     }
 }

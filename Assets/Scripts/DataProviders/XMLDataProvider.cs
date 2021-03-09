@@ -15,17 +15,21 @@ public class XMLDataProvider : IFileDataProvider
         }
     }
 
-    public T Load<T>(string path)
+    public bool TryLoad<T>(string path, out T data)
     {
         string fullPath = Application.persistentDataPath + "\\" + path;
 
         if (!File.Exists(fullPath))
-            return default(T);
+        {
+            data = default(T);
+            return false;
+        }
 
         using (var stream = new FileStream(fullPath, FileMode.Open))
         {
             var serializer = new XmlSerializer(typeof(T));
-            return (T)serializer.Deserialize(stream);
+            data = (T)serializer.Deserialize(stream);
+            return true;
         }
     }
 }
