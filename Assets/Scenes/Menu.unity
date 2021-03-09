@@ -260,7 +260,7 @@ MonoBehaviour:
     m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 98181442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e28ea1521e26fd419641f6806eec87b, type: 3}
+  m_Script: {fileID: 11500000, guid: 741bc452ebcf72a4985c0c7a823adaa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   r: {fileID: 1781496946}
@@ -798,7 +798,7 @@ MonoBehaviour:
     m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -893,7 +893,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6690463779567958437, guid: 9efa8ce622e499d4ba7f60efea834285,
+      - m_Target: {fileID: 5830853228731669974, guid: 9efa8ce622e499d4ba7f60efea834285,
           type: 3}
         m_MethodName: Exit
         m_Mode: 1
@@ -1320,7 +1320,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6690463779567958437, guid: 9efa8ce622e499d4ba7f60efea834285,
+      - m_Target: {fileID: 5830853228731669974, guid: 9efa8ce622e499d4ba7f60efea834285,
           type: 3}
         m_MethodName: Load
         m_Mode: 3
@@ -2117,7 +2117,7 @@ MonoBehaviour:
     m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -2195,7 +2195,7 @@ MonoBehaviour:
     m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -2769,7 +2769,7 @@ MonoBehaviour:
     m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1

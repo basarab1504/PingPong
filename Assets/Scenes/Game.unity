@@ -199,7 +199,7 @@ MonoBehaviour:
     m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -291,7 +291,7 @@ MonoBehaviour:
     m_MaxSize: 200
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -533,6 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  manager: {fileID: 7896496302126683540, guid: 9efa8ce622e499d4ba7f60efea834285, type: 3}
 --- !u!61 &304797247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -715,6 +716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  manager: {fileID: 7896496302126683540, guid: 9efa8ce622e499d4ba7f60efea834285, type: 3}
 --- !u!61 &318313465
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -881,7 +883,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6690463779567958437, guid: 9efa8ce622e499d4ba7f60efea834285,
+      - m_Target: {fileID: 5830853228731669974, guid: 9efa8ce622e499d4ba7f60efea834285,
           type: 3}
         m_MethodName: Load
         m_Mode: 3
@@ -1078,7 +1080,7 @@ MonoBehaviour:
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -1363,13 +1365,13 @@ MonoBehaviour:
   Scored:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -487630577449463928, guid: 9efa8ce622e499d4ba7f60efea834285,
+      - m_Target: {fileID: 704374328265300705, guid: 9efa8ce622e499d4ba7f60efea834285,
           type: 3}
         m_MethodName: CountScore
-        m_Mode: 0
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 318313467}
+          m_ObjectArgumentAssemblyTypeName: Player, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1453,7 +1455,7 @@ MonoBehaviour:
     m_MaxSize: 190
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -1531,7 +1533,7 @@ MonoBehaviour:
     m_MaxSize: 200
     m_Alignment: 0
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -1873,13 +1875,13 @@ MonoBehaviour:
   Scored:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -487630577449463928, guid: 9efa8ce622e499d4ba7f60efea834285,
+      - m_Target: {fileID: 704374328265300705, guid: 9efa8ce622e499d4ba7f60efea834285,
           type: 3}
         m_MethodName: CountScore
-        m_Mode: 0
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 304797249}
+          m_ObjectArgumentAssemblyTypeName: Player, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
