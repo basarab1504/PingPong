@@ -5,7 +5,7 @@ public class Score : MonoBehaviour
 {
     private Text text;
 
-    private void Start()
+    private void Awake()
     {
         text = GetComponent<Text>();
     }

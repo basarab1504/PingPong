@@ -5,7 +5,7 @@ public class CanvasSwitch : MonoBehaviour
     [SerializeField] private Canvas to;
     Canvas from;
 
-    private void Start()
+    private void Awake()
     {
         from = GetComponent<Canvas>();
     }

@@ -6,7 +6,7 @@ public class HighScoreObserver : MonoBehaviour
     private Text text;
     [SerializeField] private HighScore highScore;
 
-    private void Start()
+    private void Awake()
     {
         text = GetComponent<Text>();
 

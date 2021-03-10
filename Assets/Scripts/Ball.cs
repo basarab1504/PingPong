@@ -5,7 +5,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private BallSettings settings;
     private Rigidbody2D rgdBody;
 
-    private void Start()
+    private void Awake()
     {
         rgdBody = GetComponent<Rigidbody2D>();
 

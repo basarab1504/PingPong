@@ -8,7 +8,7 @@ public class BallSettingUIManager : MonoBehaviour
     [SerializeField] private Slider b;
     [SerializeField] private BallSettings settings;
 
-    private void Start()
+    private void Awake()
     {
         r.value = settings.R;
         g.value = settings.G;
