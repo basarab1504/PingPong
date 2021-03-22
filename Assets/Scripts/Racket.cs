@@ -9,6 +9,6 @@ public class Racket : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        transform.position = new Vector2(-transform.position.x, transform.position.y);
+        transform.position = new Vector2(-transform.position.x + Mathf.Sign(transform.position.x) * 0.1f, transform.position.y);
     }
 }

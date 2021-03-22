@@ -38,7 +38,7 @@ public class FieldAdjuster : MonoBehaviour
     {
         playField.size = cameraSize;
 
-        Vector2 wallSize = new Vector2(1, cameraSize.y);
+        Vector2 wallSize = new Vector2(0.1f, cameraSize.y);
         Vector2 wallOffset = new Vector2(cameraSize.x * 0.5f, 0);
 
         Adjust(wallRight, wallSize, wallOffset);
