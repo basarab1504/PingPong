@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GameStarter : MonoBehaviour
 {
+    [SerializeField] private MenuManager manager;
     [SerializeField] private Game gamePrefab;
     private static Game game;
 
@@ -11,5 +12,6 @@ public class GameStarter : MonoBehaviour
         {
             game = Instantiate(gamePrefab);
         }
+        manager.Show("Main");
     }
 }

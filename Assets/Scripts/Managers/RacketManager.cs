@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RacketManager : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 10;
     [SerializeField] private Racket up;
     [SerializeField] private Racket down;
     private float currentAxis;

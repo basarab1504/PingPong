@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deae8b212d129be42ae22227f3a3648f, type: 3}
   m_Name: BallSettings
   m_EditorClassIdentifier: 
-  minSpeed: 100
+  minSpeed: 300
   maxSpeed: 350
   minRadius: 0.3
   maxRadius: 1

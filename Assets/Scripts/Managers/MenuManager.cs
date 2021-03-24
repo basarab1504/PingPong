@@ -1,15 +1,30 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public void Load(int sceneIdx)
+    private Dictionary<string, IMenu> screens = new Dictionary<string, IMenu>();
+    private IMenu openedMenu;
+
+    private void Awake()
     {
-        SceneManager.LoadScene(sceneIdx);
+        var canvases = GetComponentsInChildren<IMenu>();
+        foreach (var item in canvases)
+        {
+            screens.Add(item.Name, item);
+        }
     }
 
-    public void Exit()
+    public void Show(string name)
     {
-        Application.Quit();
+        if (screens.ContainsKey(name))
+        {
+            openedMenu?.Hide();
+
+            IMenu menu = screens[name];
+            openedMenu = menu;
+
+            menu.Show();
+        }
     }
 }

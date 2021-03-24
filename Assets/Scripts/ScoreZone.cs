@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ScoreZone : MonoBehaviour
 {
-    [SerializeField] Player player;
+    [SerializeField] private Player player;
 
     public PlayerEvent Scored;
 

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class HighScoreObserver : MonoBehaviour
+public class HighScoreController : MonoBehaviour
 {
     private Text text;
     [SerializeField] private HighScore highScore;
