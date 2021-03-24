@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class FieldAdjuster : MonoBehaviour
 {
-    [SerializeField] private BoxCollider2D playField;
-    [SerializeField] private BoxCollider2D wallLeft;
-    [SerializeField] private BoxCollider2D wallRight;
-    [SerializeField] private BoxCollider2D zoneUp;
-    [SerializeField] private BoxCollider2D zoneDown;
+    private BoxCollider2D playField;
+    private BoxCollider2D wallLeft;
+    private BoxCollider2D wallRight;
+    private BoxCollider2D zoneUp;
+    private BoxCollider2D zoneDown;
     private Vector2 lastCheckedCameraSize;
 
-    private void Start()
+    private void Awake()
     {
+        var colliders = GetComponentsInChildren<BoxCollider2D>();
+
+        playField = colliders[0];
+        wallLeft = colliders[1];
+        wallRight = colliders[2];
+        zoneUp = colliders[3];
+        zoneDown = colliders[4];
+
         lastCheckedCameraSize = GetCameraSize();
         AdjustBorders(lastCheckedCameraSize);
     }
