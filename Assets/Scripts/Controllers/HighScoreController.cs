@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class HighScoreController : MonoBehaviour
 {
-    private Text text;
     [SerializeField] private HighScore highScore;
+    private Text text;
 
     private void Awake()
     {

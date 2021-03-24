@@ -3,6 +3,12 @@
 public class Ball : MonoBehaviour
 {
     [SerializeField] private BallSettings settings;
+    [SerializeField] private float minSpeed;
+    [SerializeField] private float maxSpeed;
+
+    [SerializeField] private float minRadius;
+    [SerializeField] private float maxRadius;
+
     private Rigidbody2D rgdBody;
 
     private void Awake()
@@ -31,7 +37,7 @@ public class Ball : MonoBehaviour
 
     private void SetRandomSize()
     {
-        var radius = Random.Range(settings.MinRadius, settings.MaxRadius);
+        var radius = Random.Range(minRadius, maxRadius);
         transform.localScale = new Vector3(radius, radius);
     }
 
@@ -40,7 +46,7 @@ public class Ball : MonoBehaviour
         var x = GenerateRandom();
         var y = GenerateRandom();
 
-        float speed = Random.Range(settings.MinSpeed, settings.MaxSpeed);
+        float speed = Random.Range(minSpeed, maxSpeed);
 
         rgdBody.AddForce(new Vector2(x, y) * speed);
     }

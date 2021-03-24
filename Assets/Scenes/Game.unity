@@ -262,7 +262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8147b867459ee1044ab37e69da92312a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScore: {fileID: 11400000, guid: 289bd13a22cd5a2488881c0a6aede6a0, type: 2}
 --- !u!114 &175887683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,11 +403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0edd2e0ef7947a44ae20358a22dff0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playField: {fileID: 303447872}
-  wallLeft: {fileID: 303447875}
-  wallRight: {fileID: 303447871}
-  zoneUp: {fileID: 1864145360}
-  zoneDown: {fileID: 776825064}
 --- !u!61 &303447875
 BoxCollider2D:
   m_ObjectHideFlags: 0
