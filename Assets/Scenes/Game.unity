@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 107091275}
   - component: {fileID: 107091278}
   - component: {fileID: 107091277}
-  - component: {fileID: 107091276}
   m_Layer: 5
   m_Name: UpScore
   m_TagString: Untagged
@@ -159,19 +158,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &107091276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107091274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c44dc7772b43c764bb37af94f8d58c90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 0}
 --- !u!114 &107091277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +210,6 @@ GameObject:
   - component: {fileID: 175887681}
   - component: {fileID: 175887684}
   - component: {fileID: 175887683}
-  - component: {fileID: 175887682}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -251,18 +236,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &175887682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175887680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8147b867459ee1044ab37e69da92312a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &175887683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,9 +413,9 @@ GameObject:
   m_Component:
   - component: {fileID: 304797245}
   - component: {fileID: 304797244}
-  - component: {fileID: 304797246}
   - component: {fileID: 304797248}
   - component: {fileID: 304797247}
+  - component: {fileID: 304797246}
   - component: {fileID: 304797249}
   m_Layer: 0
   m_Name: DownRacket
@@ -589,19 +562,8 @@ MonoBehaviour:
   ScoreUpdated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1117223623}
-        m_MethodName: UpdateScore
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 289bd13a22cd5a2488881c0a6aede6a0, type: 2}
-        m_MethodName: ScoreUpdated
+      - m_Target: {fileID: 621329576}
+        m_MethodName: OnDownPlayerScoreChange
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -621,9 +583,9 @@ GameObject:
   m_Component:
   - component: {fileID: 318313463}
   - component: {fileID: 318313462}
-  - component: {fileID: 318313464}
   - component: {fileID: 318313466}
   - component: {fileID: 318313465}
+  - component: {fileID: 318313464}
   - component: {fileID: 318313467}
   m_Layer: 0
   m_Name: UpRacket
@@ -770,19 +732,8 @@ MonoBehaviour:
   ScoreUpdated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 107091276}
-        m_MethodName: UpdateScore
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 289bd13a22cd5a2488881c0a6aede6a0, type: 2}
-        m_MethodName: ScoreUpdated
+      - m_Target: {fileID: 621329576}
+        m_MethodName: OnHighScoreChange
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1197,9 +1148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf355a3ef965c34a87ea243272bb727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score1: {fileID: 1117223624}
-  score2: {fileID: 107091277}
-  highScore: {fileID: 1352120374}
+  upScore: {fileID: 107091277}
+  downScore: {fileID: 1117223624}
+  highScore: {fileID: 175887683}
 --- !u!114 &621329576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,7 +1163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05697df88faa764da8cddbdf21062df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManager: {fileID: 0}
 --- !u!1 &765207816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,13 +1336,12 @@ MonoBehaviour:
   Scored:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 704374328265300705, guid: 9efa8ce622e499d4ba7f60efea834285,
-          type: 3}
+      - m_Target: {fileID: 1532788733}
         m_MethodName: CountScore
-        m_Mode: 2
+        m_Mode: 0
         m_Arguments:
-          m_ObjectArgument: {fileID: 318313467}
-          m_ObjectArgumentAssemblyTypeName: Player, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1409,7 +1358,6 @@ GameObject:
   - component: {fileID: 1117223622}
   - component: {fileID: 1117223625}
   - component: {fileID: 1117223624}
-  - component: {fileID: 1117223623}
   m_Layer: 5
   m_Name: DownScore
   m_TagString: Untagged
@@ -1436,19 +1384,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1117223623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117223621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c44dc7772b43c764bb37af94f8d58c90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 0}
 --- !u!114 &1117223624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1580,6 +1515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1532788732}
   - component: {fileID: 1532788731}
+  - component: {fileID: 1532788733}
   m_Layer: 0
   m_Name: Rackets
   m_TagString: Untagged
@@ -1600,8 +1536,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  up: {fileID: 318313464}
-  down: {fileID: 304797246}
 --- !u!4 &1532788732
 Transform:
   m_ObjectHideFlags: 0
@@ -1618,6 +1552,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1532788733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532788730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98aef9f7ccb3664d85ed636620a420d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreSettings: {fileID: 11400000, guid: 289bd13a22cd5a2488881c0a6aede6a0, type: 2}
+  HighScoreChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 621329576}
+        m_MethodName: OnHighScoreChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1695169790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,13 +1906,12 @@ MonoBehaviour:
   Scored:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 704374328265300705, guid: 9efa8ce622e499d4ba7f60efea834285,
-          type: 3}
+      - m_Target: {fileID: 1532788733}
         m_MethodName: CountScore
-        m_Mode: 2
+        m_Mode: 0
         m_Arguments:
-          m_ObjectArgument: {fileID: 304797249}
-          m_ObjectArgumentAssemblyTypeName: Player, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1968,6 +1928,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310469107489800237, guid: 73efb63c6ded36c4b8aa9c1f5c3c13d8,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310469107489800237, guid: 73efb63c6ded36c4b8aa9c1f5c3c13d8,
+        type: 3}
+      propertyPath: minSpeed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310469107489800237, guid: 73efb63c6ded36c4b8aa9c1f5c3c13d8,
+        type: 3}
+      propertyPath: maxRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310469107489800237, guid: 73efb63c6ded36c4b8aa9c1f5c3c13d8,
+        type: 3}
+      propertyPath: minRadius
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5310469107489800237, guid: 73efb63c6ded36c4b8aa9c1f5c3c13d8,
         type: 3}

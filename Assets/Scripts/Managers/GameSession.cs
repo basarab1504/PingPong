@@ -1,16 +1,9 @@
 using UnityEngine;
 
-enum Direction
-{
-    UP,
-    DOWN
-}
-
 public class GameSession : MonoBehaviour
 {
     [SerializeField] private float speed = 10;
-    [SerializeField] private Racket up;
-    [SerializeField] private Racket down;
+    [SerializeField] private Player[] players;
     private float currentAxis;
     private HighScore scoreSettings;
 
@@ -18,15 +11,9 @@ public class GameSession : MonoBehaviour
     public IntEvent UpScoreChanged;
     public IntEvent DownScoreChanged;
 
-    private void Update()
+    private void Awake()
     {
-        currentAxis = Input.GetAxis("Horizontal");
-        if (currentAxis != 0)
-        {
-            var vector = new Vector3(currentAxis, 0, 0);
-            up.Push(vector, speed);
-            down.Push(vector, speed);
-        }
+
     }
 
     public void CountScore(Player player)
