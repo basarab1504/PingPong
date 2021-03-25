@@ -11,11 +11,8 @@ public class HighScore : ScriptableObject, ISerializeable<ScoreData>
         set 
         {
             highScore = value;
-            HighScoreUpdated.Invoke(highScore);
         }
     }
-
-    public IntEvent HighScoreUpdated;
 
     public void Load(ScoreData data)
     {

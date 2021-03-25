@@ -3,9 +3,13 @@ using UnityEngine;
 public class RacketManager : MonoBehaviour
 {
     [SerializeField] private float speed = 10;
-    [SerializeField] private Racket up;
-    [SerializeField] private Racket down;
+    private Racket[] rackets;
     private float currentAxis;
+
+    private void Awake()
+    {
+        rackets = GetComponentsInChildren<Racket>();
+    }
 
     private void Update()
     {
@@ -13,8 +17,10 @@ public class RacketManager : MonoBehaviour
         if (currentAxis != 0)
         {
             var vector = new Vector3(currentAxis, 0, 0);
-            up.Push(vector, speed);
-            down.Push(vector, speed);
+            foreach (var item in rackets)
+            {
+                item.Push(vector, speed);
+            }
         }
     }
 }

@@ -10,14 +10,19 @@ class GameMenuController : MonoBehaviour
         view = GetComponent<GameMenuView>();
     }
 
-    public void OnFirstPlayerScoreChange(float value)
+    public void OnUpPlayerScoreChange(int value)
     {
         view.SetPlayerOneScore(value);
     }
 
-    public void OnSecondPlayerScoreChange(float value)
+    public void OnDownPlayerScoreChange(int value)
     {
         view.SetPlayerTwoScore(value);
+    }
+
+    public void OnHighScoreChange(int value)
+    {
+        view.SetHighScore(value);
     }
 
     public void OnExitButtonClick()
