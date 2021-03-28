@@ -2,18 +2,28 @@
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] private HighScore scoreSettings;
+    private int highScore;
 
     public IntEvent HighScoreChanged;
+
+    private void Awake()
+    {
+        highScore = PlayerPrefs.GetInt("highScore", 0);
+    }
+
+    private void OnDestroy()
+    {
+        PlayerPrefs.SetInt("highScore", highScore);
+    }
 
     public void CountScore(Player player)
     {
         player.Score++;
         
-        if (player.Score > scoreSettings.HighScoreValue)
+        if (player.Score > highScore)
         {
-            scoreSettings.HighScoreValue = player.Score;
-            HighScoreChanged.Invoke(scoreSettings.HighScoreValue);
+            highScore = player.Score;
+            HighScoreChanged.Invoke(highScore);
         }
     }
 }

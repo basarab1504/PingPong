@@ -4,12 +4,11 @@ using UnityEngine.SceneManagement;
 class GameMenuController : MonoBehaviour
 {
     private GameMenuView view;
-    [SerializeField] private HighScore scoreSettings;
 
     private void Awake()
     {
         view = GetComponent<GameMenuView>();
-        OnHighScoreChange(scoreSettings.HighScoreValue);
+        OnHighScoreChange(PlayerPrefs.GetInt("highScore", 0));
     }
 
     public void OnUpPlayerScoreChange(int value)

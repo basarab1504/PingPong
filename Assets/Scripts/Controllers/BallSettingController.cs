@@ -3,31 +3,45 @@ using UnityEngine;
 public class BallSettingController : MonoBehaviour
 {
     SettingsMenuView view;
-    [SerializeField] BallSettings ballSettings;
+    Color color;
     [SerializeField] MenuManager menuManager;
 
     private void Awake()
     {
         view = GetComponent<SettingsMenuView>();
-        view.OnColorChangeColor(ballSettings.Color);
+
+        var r = PlayerPrefs.GetFloat("R", 0);
+        var g = PlayerPrefs.GetFloat("G", 0);
+        var b = PlayerPrefs.GetFloat("B", 0);
+
+        color = new Color(r, g, b);
+        
+        view.OnColorChangeColor(color);
+    }
+
+    private void OnDestroy()
+    {
+        PlayerPrefs.SetFloat("R", color.r);
+        PlayerPrefs.SetFloat("G", color.g);
+        PlayerPrefs.SetFloat("B", color.b);
     }
 
     public void OnRedColorChange(float value)
     {
-        ballSettings.R = value;
-        view.OnColorChangeColor(ballSettings.Color);
+        color.r = value;
+        view.OnColorChangeColor(color);
     }
 
     public void OnGreenColorChange(float value)
     {
-        ballSettings.G = value;
-        view.OnColorChangeColor(ballSettings.Color);
+        color.g = value;
+        view.OnColorChangeColor(color);
     }
 
     public void OnBlueColorChange(float value)
     {
-        ballSettings.B = value;
-        view.OnColorChangeColor(ballSettings.Color);
+        color.b = value;
+        view.OnColorChangeColor(color);
     }
 
     public void OnBackButtonClick()

@@ -2,7 +2,6 @@
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] private BallSettings settings;
     [SerializeField] private float minSpeed;
     [SerializeField] private float maxSpeed;
 
@@ -15,7 +14,11 @@ public class Ball : MonoBehaviour
     {
         rgdBody = GetComponent<Rigidbody2D>();
 
-        GetComponent<SpriteRenderer>().color = settings.Color;
+        var r = PlayerPrefs.GetFloat("R", 0);
+        var g = PlayerPrefs.GetFloat("G", 0);
+        var b = PlayerPrefs.GetFloat("B", 0);
+        
+        GetComponent<SpriteRenderer>().color = new Color(r, g, b);
 
         SetRandomSize();
         SetRandomDirection();
