@@ -733,7 +733,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 621329576}
-        m_MethodName: OnHighScoreChange
+        m_MethodName: OnUpPlayerScoreChange
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -825,10 +825,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5830853228731669974, guid: 9efa8ce622e499d4ba7f60efea834285,
-          type: 3}
-        m_MethodName: Load
-        m_Mode: 3
+      - m_Target: {fileID: 621329576}
+        m_MethodName: OnExitButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1163,6 +1162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05697df88faa764da8cddbdf21062df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreSettings: {fileID: 11400000, guid: 289bd13a22cd5a2488881c0a6aede6a0, type: 2}
 --- !u!1 &765207816
 GameObject:
   m_ObjectHideFlags: 0
