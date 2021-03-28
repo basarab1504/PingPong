@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class BallSettingController : MonoBehaviour
 {
+    SettingsMenuView view;
     [SerializeField] BallSettings ballSettings;
     [SerializeField] MenuManager menuManager;
-    SettingsMenuView view;
 
     private void Awake()
     {
